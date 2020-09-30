@@ -25,4 +25,7 @@
     <dimen name="config_customCutoutBottomWidth">154.0px</dimen>
     <dimen name="config_customCutoutBottomHeight">154.0px</dimen>
 
+    <!-- The minimum bottom margin of the keyguard security container -->
+    <dimen name="kg_security_container_min_bottom_margin">500px</dimen>
+
 </resources>
