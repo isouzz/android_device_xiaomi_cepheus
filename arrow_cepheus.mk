@@ -30,3 +30,5 @@ DEVICE_MAINTAINER := isouzz
 
 # Include firmware
 $(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
+
+TARGET_EXCLUDE_LAWNCHAIR := true
