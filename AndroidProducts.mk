@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_raphael.mk
+    $(LOCAL_DIR)/omni_cepheus.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_raphael-user \
-    omni_raphael-userdebug \
-    omni_raphael-eng
+    omni_cepheus-user \
+    omni_cepheus-userdebug \
+    omni_cepheus-eng

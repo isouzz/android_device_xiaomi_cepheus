@@ -1,0 +1,32 @@
+type hal_fod_cepheus, coredomain, domain;
+hal_server_domain(hal_fod_cepheus, hal_omni_fod)
+
+type hal_fod_cepheus_exec, exec_type, system_file_type, file_type;
+init_daemon_domain(hal_fod_cepheus)
+
+# Allow access to the HALs
+hal_client_domain(hal_fod_cepheus, hal_fingerprint)
+
+# Allow binder communication with hal_displayfearure_default
+binder_call(hal_fod_cepheus, hal_displayfeature_xiaomi_default)
+
+# Allow binder communication with hal_fingerprint
+binder_call(hal_fod_cepheus, hal_fingerprint)
+
+#allow hal_fod_cepheus hal_displaycolor_xiaomi_hwservice:hwservice_manager find;
+#allow hal_fod_cepheus hal_display_color_hwservice:hwservice_manager find;
+
+#Allow hal_fod_cepheus to hal_displayfeature_xiaomi_hwservice
+allow hal_fod_cepheus hal_displayfeature_xiaomi_hwservice:hwservice_manager find;
+
+# Allow hal_fod_cepheus to hal_fingerprint_hwservice_xiaomi
+allow hal_fod_cepheus hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
+
+# Allow hal_fod_cepheus to write to fod sysfs
+allow hal_fod_cepheus sysfs_tp_fodstatus:file rw_file_perms;
+
+allow hal_fod_cepheus sysfs_graphics:dir search;
+allow hal_fod_cepheus sysfs_graphics:file {getattr open read};
+allow hal_fod_cepheus sysfs:file {getattr};
+
+allow hal_fod_cepheus omni_sysfs_drm:file rw_file_perms;
