@@ -1,5 +1,18 @@
 on init
     mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/CarrierConfigResCommon.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/FrameworksResCommon.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/FrameworksResTarget.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/SystemUIResCommon.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/TelecommResCommon.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/TelephonyResCommon.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/CellBroadcastReceiverResCommon.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/DevicesAndroidOverlay.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/ElderlyNavigationBarOverlay.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/GestureLineOverlay.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/MccMncOverlay.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/MiuiBiometricResOverlay.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/MiuiBluetoothOverlay.apk bind
+    mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/MiuiFrameworkResOverlay.apk bind
 
 service vendor.capabilityconfigstore /vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
     override
