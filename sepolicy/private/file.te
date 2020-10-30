@@ -16,7 +16,6 @@ type vendor_pd_locater_dbg_prop, property_type;
 # kgsl gpu model file type for sysfs access
 type sysfs_kgsl_gpu_model, sysfs_type, fs_type;
 
-type motor_device, dev_type;
 type hall_device, dev_type;
 
 type diag_device, dev_type, mlstrustedobject;
